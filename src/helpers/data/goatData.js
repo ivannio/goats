@@ -48,4 +48,9 @@ const freeAGoat = (goatId) => {
   goats[goatIndex].isBusy = false;
 };
 
-export default { getGoats, freeAGoat };
+const useAGoat = (goatId) => {
+  const goatIndex = goats.findIndex((goat) => goat.id === goatId);
+  goats[goatIndex].isBusy = true;
+};
+
+export default { getGoats, freeAGoat, useAGoat };
