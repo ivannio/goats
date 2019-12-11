@@ -4,6 +4,7 @@ import './App.scss';
 import goatData from '../helpers/data/goatData';
 
 import GoatCorral from '../components/GoatCorral/GoatCorral';
+import GoatCounter from '../components/Goat Counter/GoatCounter';
 
 class App extends React.Component {
   state = {
@@ -30,7 +31,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <button className="btn btn-outline-success">b o o t s t r a p - b u t t s</button>
+        <GoatCounter goats={this.state.goats} />
         <GoatCorral butts={this.state.goats} freeGoat={this.freeGoat} useGoat={this.useGoat} />
       </div>
     );
